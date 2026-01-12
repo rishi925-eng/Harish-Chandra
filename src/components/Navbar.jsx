@@ -59,10 +59,10 @@ const Navbar = () => {
 
         {/* Left: Logo */}
         <div>
-          <div className="text-lg sm:text-xl md:text-2xl font-serif italic text-white">
+          <div className="text-lg sm:text-xl md:text-2xl font-secondary italic text-white">
             Dr. Harish Chandra
           </div>
-          <div className="text-xs sm:text-sm text-white">
+          <div className="text-xs sm:text-sm text-white font-primary">
             Assistant Professor
           </div>
         </div>
@@ -82,7 +82,7 @@ const Navbar = () => {
             <button
               className="
                 group relative flex items-center gap-1 px-3 py-2 rounded-md
-                text-white
+                text-white font-primary
                 hover:bg-white/10
                 hover:shadow-md
                 transition-all duration-300 ease-out
@@ -148,7 +148,7 @@ const Navbar = () => {
               onClick={() => setMobileResearchOpen(!mobileResearchOpen)}
               className="
                 w-full text-left group relative flex items-center gap-3 px-6 py-3 overflow-hidden block
-                text-white
+                text-white font-primary
                 hover:bg-[#913c07] hover:text-white
                 transition-all duration-300 ease-out
               "
@@ -190,7 +190,7 @@ const NavItem = ({ to, icon, label }) => (
     to={to}
     className="
       group relative flex items-center gap-1 px-3 py-2 rounded-md
-      text-white
+      text-white font-primary
       hover:bg-white/10
       hover:shadow-md
       transition-all duration-300 ease-out
@@ -218,7 +218,7 @@ const MobileNavItem = ({ to, label, onClick, icon }) => (
     onClick={onClick}
     className="
       group relative flex items-center gap-3 px-6 py-3 overflow-hidden
-      text-white w-full block
+      text-white w-full block font-primary
       hover:bg-[#913c07] hover:text-white
       transition-all duration-300 ease-out
       before:absolute before:left-0 before:top-0 before:h-full before:w-1.5
@@ -246,7 +246,7 @@ const DropdownItem = ({ to, icon, label }) => (
   <Link
     to={to}
     className="
-      group flex items-center gap-3 px-4 py-3 text-white
+      group flex items-center gap-3 px-4 py-3 text-white font-primary
       hover:bg-[#913c07]
       transition-all duration-300
       border-b border-white/10 last:border-b-0
@@ -267,7 +267,7 @@ const MobileSubNavItem = ({ to, label, onClick, icon }) => (
     onClick={onClick}
     className="
       group relative flex items-center gap-3 px-10 py-2.5 overflow-hidden
-      text-white text-sm bg-[#3d2a1f] w-full block
+      text-white text-sm bg-[#3d2a1f] w-full block font-primary
       hover:bg-[#913c07] hover:text-white
       transition-all duration-300 ease-out
     "
