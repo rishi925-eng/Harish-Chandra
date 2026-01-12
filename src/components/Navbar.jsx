@@ -48,16 +48,21 @@ const Navbar = () => {
             transform: translateX(0);
           }
         }
+        @media (min-width: 1024px) {
+          .mobile-hamburger {
+            display: none !important;
+          }
+        }
       `}</style>
       
-      <nav className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-3 sm:py-4 flex items-center justify-between relative z-10">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between relative z-10">
 
         {/* Left: Logo */}
-        <div className="flex-shrink-0">
-          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-secondary italic text-white leading-tight">
+        <div>
+          <div className="text-lg sm:text-xl md:text-2xl font-serif italic text-white">
             Dr. Harish Chandra
           </div>
-          <div className="text-xs sm:text-sm text-white font-primary">
+          <div className="text-xs sm:text-sm text-white">
             Assistant Professor
           </div>
         </div>
@@ -78,7 +83,7 @@ const Navbar = () => {
               className="
                 group relative flex items-center gap-1 px-3 py-2 rounded-md
                 text-white
-                hover:bg-linear-to-r hover:from-gray-700 hover:to-gray-600
+                hover:bg-white/10
                 hover:shadow-md
                 transition-all duration-300 ease-out
                 before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2
@@ -101,7 +106,7 @@ const Navbar = () => {
             
             {researchOpen && (
               <div 
-                className="absolute top-full left-0 mt-0 w-64 bg-[#913c07] shadow-lg rounded-md border border-secondary overflow-hidden z-50"
+                className="absolute top-full left-0 mt-0 w-64 bg-[#563c29] shadow-lg rounded-md border border-[#913c07] overflow-hidden z-50"
                 style={{ animation: 'slideFromLeft 0.3s ease-out' }}
               >
                 <DropdownItem to="/research" icon={<FlaskConical size={16} />} label="Research Projects" />
@@ -123,7 +128,7 @@ const Navbar = () => {
 
         {/* Mobile Hamburger */}
         <button
-          className="lg:hidden text-white"
+          className="mobile-hamburger lg:hidden text-white"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={26} /> : <Menu size={26} />}
@@ -132,19 +137,19 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-[#913c07] border-t shadow-md relative z-10">
+        <div className="lg:hidden bg-[#563c29] border-t shadow-md relative z-10 block">
           <MobileNavItem to="/" label="Home" icon={<Home size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/profile" label="Profile" icon={<User size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/teaching" label="Teaching" icon={<GraduationCap size={16} />} onClick={() => setOpen(false)} />
           
           {/* Mobile Research Dropdown */}
-          <div>
+          <div className="w-full block">
             <button
               onClick={() => setMobileResearchOpen(!mobileResearchOpen)}
               className="
-                w-full text-left group relative flex items-center gap-3 px-6 py-3 overflow-hidden
+                w-full text-left group relative flex items-center gap-3 px-6 py-3 overflow-hidden block
                 text-white
-                hover:bg-primaryDark hover:text-white
+                hover:bg-[#913c07] hover:text-white
                 transition-all duration-300 ease-out
               "
             >
@@ -158,7 +163,7 @@ const Navbar = () => {
             </button>
             
             {mobileResearchOpen && (
-              <div className="bg-[#913c07]">
+              <div className="bg-[#3d2a1f]">
                 <MobileSubNavItem to="/research" label="Research Projects" icon={<FlaskConical size={16} />} onClick={() => setOpen(false)} />
                 <MobileSubNavItem to="/publications" label="Publications" icon={<BookOpen size={16} />} onClick={() => setOpen(false)} />
                 <MobileSubNavItem to="/workshops" label="Workshop" icon={<Briefcase size={16} />} onClick={() => setOpen(false)} />
@@ -186,7 +191,7 @@ const NavItem = ({ to, icon, label }) => (
     className="
       group relative flex items-center gap-1 px-3 py-2 rounded-md
       text-white
-      hover:bg-linear-to-r hover:from-gray-700 hover:to-gray-600
+      hover:bg-white/10
       hover:shadow-md
       transition-all duration-300 ease-out
       before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2
@@ -213,8 +218,8 @@ const MobileNavItem = ({ to, label, onClick, icon }) => (
     onClick={onClick}
     className="
       group relative flex items-center gap-3 px-6 py-3 overflow-hidden
-      text-white
-      hover:bg-primaryDark hover:text-white
+      text-white w-full block
+      hover:bg-[#913c07] hover:text-white
       transition-all duration-300 ease-out
       before:absolute before:left-0 before:top-0 before:h-full before:w-1.5
       before:bg-white
@@ -242,9 +247,9 @@ const DropdownItem = ({ to, icon, label }) => (
     to={to}
     className="
       group flex items-center gap-3 px-4 py-3 text-white
-      hover:bg-primaryDark
+      hover:bg-[#913c07]
       transition-all duration-300
-      border-b border-secondary last:border-b-0
+      border-b border-white/10 last:border-b-0
     "
   >
     <span className="transition-transform duration-300 group-hover:rotate-6 text-white">
@@ -262,13 +267,13 @@ const MobileSubNavItem = ({ to, label, onClick, icon }) => (
     onClick={onClick}
     className="
       group relative flex items-center gap-3 px-10 py-2.5 overflow-hidden
-      text-secondary text-sm bg-bgColor
-      hover:bg-primaryDark hover:text-white
+      text-white text-sm bg-[#3d2a1f] w-full block
+      hover:bg-[#913c07] hover:text-white
       transition-all duration-300 ease-out
     "
   >
     {icon && (
-      <span className="transition-transform duration-300 text-secondary group-hover:text-white">
+      <span className="transition-transform duration-300 text-white/80 group-hover:text-white group-hover:scale-110">
         {icon}
       </span>
     )}

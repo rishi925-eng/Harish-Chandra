@@ -1,13 +1,11 @@
 const Home = () => {
   return (
-    <main className="w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-4 sm:py-6 md:py-10 bg-[#fff4dc]">
-
-
+    <div className="w-full">
       {/* Border wrapper */}
-      <div className="border border-[#913c07] p-2 sm:p-4 md:p-6 overflow-visible">
+      <div className="border border-[#913c07] p-2 sm:p-4 md:p-6 overflow-hidden">
 
         {/* Hero Image */}
-        <section className="w-full overflow-visible">
+        <section className="w-full overflow-hidden">
           <picture>
             <source
               media="(min-width: 1024px)"
@@ -16,7 +14,7 @@ const Home = () => {
             <img
               src="/hero-mobile.jpeg"
               alt="Hero"
-              className="w-full h-auto object-contain sm:rounded-xl shadow-xl transform scale-105 transition-transform duration-500 hover:scale-110 border-4 border-white rounded-lg"
+              className="w-full h-auto object-contain sm:rounded-xl shadow-xl transition-transform duration-500 border-4 border-white rounded-lg"
             />
           </picture>
         </section>
@@ -37,7 +35,7 @@ const Home = () => {
         </section>
 
       </div>
-    </main>
+    </div>
   );
 };
 

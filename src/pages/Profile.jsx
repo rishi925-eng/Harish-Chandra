@@ -1,6 +1,6 @@
 const Profile = () => {
   return (
-    <div className="border border-[#913c07] p-2 sm:p-4 md:p-6 bg-[#fff4dc]">
+    <div className="w-full border border-[#913c07] p-2 sm:p-4 md:p-6 bg-[#fff4dc]">
 
       {/* Academic Background */}
       <section>
