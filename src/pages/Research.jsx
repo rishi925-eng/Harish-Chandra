@@ -1,37 +1,37 @@
 const Research = () => {
   return (
-    <div className="border border-[#76323F] p-3 sm:p-4 md:p-6 bg-[#D7CEC7]">
+    <div className="border border-[#913c07] p-2 sm:p-4 md:p-6 bg-[#fff4dc]">
 
       {/* Page Title */}
-      <h2 className="text-2xl sm:text-3xl font-semibold text-[#76323F]">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#913c07]">
         Research Projects
       </h2>
-      <hr className="my-3 border-[#76323F]" />
+      <hr className="my-2 sm:my-3 border-[#913c07]" />
 
-      <div className="overflow-x-auto -mx-3 sm:mx-0">
-        <table className="w-full border-collapse text-black text-sm sm:text-base">
+      <div className="overflow-x-auto -mx-2 sm:-mx-3 md:mx-0">
+        <table className="w-full border-collapse text-secondary text-xs sm:text-sm md:text-base font-primary">
         <tbody>
 
           {/* Project Title */}
-          <tr className="border-t border-[#76323F]">
-            <td colSpan="2" className="py-4 font-semibold text-[#76323F]">
+          <tr className="border-t border-[#913c07]">
+            <td colSpan="2" className="py-3 sm:py-4 px-2 sm:px-0 font-semibold text-[#913c07]">
               Study of Derived Length and Nilpotency Class of Group Algebras
             </td>
           </tr>
 
           {/* Period */}
-          <tr className="border-t border-[#76323F]">
-            <td className="py-3 w-1/4 font-semibold text-[#76323F]">
+          <tr className="border-t border-[#913c07]">
+            <td className="py-2 sm:py-3 px-2 sm:px-0 w-1/3 sm:w-1/4 font-semibold text-[#913c07]">
               Period
             </td>
-            <td className="py-3">
+            <td className="py-2 sm:py-3 px-2 sm:px-0">
               2017 – 2020
             </td>
           </tr>
 
           {/* Funding */}
-          <tr className="border-t border-[#76323F]">
-            <td className="py-3 font-semibold text-[#76323F]">
+          <tr className="border-t border-[#913c07]">
+            <td className="py-3 font-semibold text-[#913c07]">
               Funding
             </td>
             <td className="py-3">
@@ -40,11 +40,11 @@ const Research = () => {
           </tr>
 
           {/* Amount */}
-          <tr className="border-t border-[#76323F]">
-            <td className="py-3 font-semibold text-[#76323F]">
+          <tr className="border-t border-[#913c07]">
+            <td className="py-3 font-semibold text-[#913c07]">
               Amount
             </td>
-            <td className="py-3 text-[#76323F] font-semibold">
+            <td className="py-3 text-[#913c07] font-semibold">
               Rs. 5.45 Lac
             </td>
           </tr>
@@ -58,3 +58,7 @@ const Research = () => {
 };
 
 export default Research;
+
+
+
+

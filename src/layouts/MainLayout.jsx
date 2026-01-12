@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#D7CEC7]">
+    <div className="min-h-screen flex flex-col bg-[#fff4dc]">
       
       <Navbar />
 
@@ -18,3 +18,4 @@ const MainLayout = ({ children }) => {
 };
 
 export default MainLayout;
+

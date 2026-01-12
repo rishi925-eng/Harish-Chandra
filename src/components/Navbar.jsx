@@ -25,7 +25,7 @@ const Navbar = () => {
   const [mobileResearchOpen, setMobileResearchOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#565656] shadow-sm relative group">
+    <header className="sticky top-0 z-50 bg-[#913c07] shadow-sm relative group">
       {/* Lighter animation on hover */}
       <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" 
            style={{
@@ -50,14 +50,14 @@ const Navbar = () => {
         }
       `}</style>
       
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between relative z-10">
+      <nav className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-3 sm:py-4 flex items-center justify-between relative z-10">
 
         {/* Left: Logo */}
-        <div>
-          <div className="text-lg sm:text-xl md:text-2xl font-serif italic text-white">
+        <div className="flex-shrink-0">
+          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-secondary italic text-white leading-tight">
             Dr. Harish Chandra
           </div>
-          <div className="text-xs sm:text-sm text-white">
+          <div className="text-xs sm:text-sm text-white font-primary">
             Assistant Professor
           </div>
         </div>
@@ -101,7 +101,7 @@ const Navbar = () => {
             
             {researchOpen && (
               <div 
-                className="absolute top-full left-0 mt-0 w-64 bg-[#565656] shadow-lg rounded-md border border-gray-600 overflow-hidden z-50"
+                className="absolute top-full left-0 mt-0 w-64 bg-[#913c07] shadow-lg rounded-md border border-secondary overflow-hidden z-50"
                 style={{ animation: 'slideFromLeft 0.3s ease-out' }}
               >
                 <DropdownItem to="/research" icon={<FlaskConical size={16} />} label="Research Projects" />
@@ -132,7 +132,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-[#565656] border-t shadow-md relative z-10">
+        <div className="lg:hidden bg-[#913c07] border-t shadow-md relative z-10">
           <MobileNavItem to="/" label="Home" icon={<Home size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/profile" label="Profile" icon={<User size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/teaching" label="Teaching" icon={<GraduationCap size={16} />} onClick={() => setOpen(false)} />
@@ -144,7 +144,7 @@ const Navbar = () => {
               className="
                 w-full text-left group relative flex items-center gap-3 px-6 py-3 overflow-hidden
                 text-white
-                hover:bg-gray-700 hover:text-white
+                hover:bg-primaryDark hover:text-white
                 transition-all duration-300 ease-out
               "
             >
@@ -158,7 +158,7 @@ const Navbar = () => {
             </button>
             
             {mobileResearchOpen && (
-              <div className="bg-[#565656]">
+              <div className="bg-[#913c07]">
                 <MobileSubNavItem to="/research" label="Research Projects" icon={<FlaskConical size={16} />} onClick={() => setOpen(false)} />
                 <MobileSubNavItem to="/publications" label="Publications" icon={<BookOpen size={16} />} onClick={() => setOpen(false)} />
                 <MobileSubNavItem to="/workshops" label="Workshop" icon={<Briefcase size={16} />} onClick={() => setOpen(false)} />
@@ -214,7 +214,7 @@ const MobileNavItem = ({ to, label, onClick, icon }) => (
     className="
       group relative flex items-center gap-3 px-6 py-3 overflow-hidden
       text-white
-      hover:bg-gray-700 hover:text-white
+      hover:bg-primaryDark hover:text-white
       transition-all duration-300 ease-out
       before:absolute before:left-0 before:top-0 before:h-full before:w-1.5
       before:bg-white
@@ -242,9 +242,9 @@ const DropdownItem = ({ to, icon, label }) => (
     to={to}
     className="
       group flex items-center gap-3 px-4 py-3 text-white
-      hover:bg-gray-700
+      hover:bg-primaryDark
       transition-all duration-300
-      border-b border-gray-600 last:border-b-0
+      border-b border-secondary last:border-b-0
     "
   >
     <span className="transition-transform duration-300 group-hover:rotate-6 text-white">
@@ -262,13 +262,13 @@ const MobileSubNavItem = ({ to, label, onClick, icon }) => (
     onClick={onClick}
     className="
       group relative flex items-center gap-3 px-10 py-2.5 overflow-hidden
-      text-black text-sm bg-white
-      hover:bg-gray-600 hover:text-white
+      text-secondary text-sm bg-bgColor
+      hover:bg-primaryDark hover:text-white
       transition-all duration-300 ease-out
     "
   >
     {icon && (
-      <span className="transition-transform duration-300 text-black">
+      <span className="transition-transform duration-300 text-secondary group-hover:text-white">
         {icon}
       </span>
     )}

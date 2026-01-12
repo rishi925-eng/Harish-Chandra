@@ -2,40 +2,41 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="border border-[#565656] p-6 bg-[#D7CEC7] text-black">
+    <div className="border border-[#913c07] p-3 sm:p-4 md:p-6 bg-[#fff4dc] text-secondary font-primary">
 
       {/* Title */}
-      <h2 className="text-3xl font-semibold text-[#76323F] mb-6">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#913c07] mb-4 sm:mb-6">
         Contact Details
       </h2>
 
       {/* Gradient Card */}
       <div
         className="
-          rounded-xl p-6
+          rounded-lg sm:rounded-xl p-4 sm:p-6
           w-full
-          text-black
+          text-secondary
+          font-primary
         "
       >
-        <h3 className="text-2xl font-semibold mb-1">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 font-secondary">
           Dr. Harish Chandra
         </h3>
 
-        <p className="text-sm mb-4">
+        <p className="text-xs sm:text-sm mb-3 sm:mb-4">
           Assistant Professor
         </p>
 
-        <div className="space-y-1 text-sm mb-6">
+        <div className="space-y-1 text-xs sm:text-sm mb-4 sm:mb-6">
           <p>Department of Mathematics and Scientific Computing</p>
           <p>Madan Mohan Malaviya University of Technology</p>
           <p>Gorakhpur, Uttar Pradesh – 273010, India</p>
         </div>
 
-        <div className="flex items-start gap-4 mb-4">
-          <div className="bg-white/20 p-2 rounded-lg">
-            <Phone size={18} />
+        <div className="flex items-start gap-2 sm:gap-4 mb-3 sm:mb-4">
+          <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg flex-shrink-0">
+            <Phone size={16} className="sm:w-[18px] sm:h-[18px]" />
           </div>
-          <p className="text-sm">
+          <p className="text-xs sm:text-sm break-words">
             +91-9450565757; +91-9235501647
           </p>
         </div>
@@ -63,3 +64,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+

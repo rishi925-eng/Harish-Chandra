@@ -117,37 +117,37 @@ const Talks = () => {
   ];
 
   return (
-    <div className="p-3 sm:p-4 md:p-6 bg-[#D7CEC7]">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#76323F] mb-4 sm:mb-6">
-        Talk Delivered
+    <div className="p-2 sm:p-4 md:p-6 bg-[#fff4dc]">
+      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#913c07] mb-3 sm:mb-4 md:mb-6">
+        Talks Delivered
       </h1>
 
-      <div className="bg-[#D7CEC7] rounded-lg border-2 border-[#76323F] shadow-sm overflow-hidden">
+      <div className="bg-[#fff4dc] rounded-lg border-2 border-[#913c07] shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-sm sm:text-base">
+          <table className="w-full text-xs sm:text-sm md:text-base">
             <thead>
-              <tr className="bg-[#565656]">
-                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">S.No.</th>
-                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Title</th>
-                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Date</th>
-                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Venue</th>
-                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Audience</th>
+              <tr className="bg-[#913c07]">
+                <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-left font-semibold text-white whitespace-nowrap">S.No.</th>
+                <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-left font-semibold text-white">Title</th>
+                <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-left font-semibold text-white">Date</th>
+                <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-left font-semibold text-white">Venue</th>
+                <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-left font-semibold text-white">Audience</th>
               </tr>
             </thead>
             <tbody>
               {talks.length > 0 ? (
                 talks.map((talk, index) => (
-                  <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                    <td className="px-3 sm:px-4 py-2 sm:py-3">{index + 1}</td>
-                    <td className="px-3 sm:px-4 py-2 sm:py-3">{talk.title}</td>
-                    <td className="px-3 sm:px-4 py-2 sm:py-3">{talk.date}</td>
-                    <td className="px-3 sm:px-4 py-2 sm:py-3">{talk.venue}</td>
-                    <td className="px-3 sm:px-4 py-2 sm:py-3">{talk.audience}</td>
+                  <tr key={index} className="border-b border-secondary/20 hover:bg-bgColorDark">
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 whitespace-nowrap">{index + 1}</td>
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3">{talk.title}</td>
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 whitespace-nowrap">{talk.date}</td>
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3">{talk.venue}</td>
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3">{talk.audience}</td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan="5" className="px-3 sm:px-4 py-8 text-center text-gray-500">
+                  <td colSpan="5" className="px-3 sm:px-4 py-8 text-center text-secondary/70 font-primary">
                     No talk records added yet.
                   </td>
                 </tr>
@@ -161,3 +161,7 @@ const Talks = () => {
 };
 
 export default Talks;
+
+
+
+

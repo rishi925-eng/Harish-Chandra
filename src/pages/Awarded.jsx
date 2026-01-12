@@ -106,20 +106,20 @@ const Awarded = () => {
   ];
 
   return (
-    <div className="p-3 sm:p-4 md:p-6 space-y-6 sm:space-y-8 bg-[#D7CEC7]">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#76323F] mb-4 sm:mb-6">
+    <div className="p-3 sm:p-4 md:p-6 space-y-6 sm:space-y-8 bg-[#fff4dc]">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#913c07] mb-4 sm:mb-6">
         Research Supervision
       </h1>
 
       {/* PhD Awarded */}
-      <div className="bg-[#D7CEC7] rounded-lg border-2 border-[#76323F] shadow-sm overflow-hidden">
-        <h2 className="text-xl sm:text-2xl font-bold text-[#76323F] px-3 sm:px-4 py-3 bg-gray-50">
+      <div className="bg-[#fff4dc] rounded-lg border-2 border-[#913c07] shadow-sm overflow-hidden">
+        <h2 className="text-xl sm:text-2xl font-bold text-[#913c07] px-3 sm:px-4 py-3 bg-gray-50">
           Ph.D. Awarded
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm sm:text-base">
             <thead>
-              <tr className="bg-[#565656]">
+              <tr className="bg-[#913c07]">
                 <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">S.No.</th>
                 <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Name</th>
                 <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Reg. No.</th>
@@ -129,7 +129,7 @@ const Awarded = () => {
             </thead>
             <tbody>
               {phdAwarded.map((student, index) => (
-                <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
+                <tr key={index} className="border-b border-secondary/20 hover:bg-bgColorDark">
                   <td className="px-3 sm:px-4 py-2 sm:py-3">{index + 1}</td>
                   <td className="px-3 sm:px-4 py-2 sm:py-3">{student.name}</td>
                   <td className="px-3 sm:px-4 py-2 sm:py-3">{student.regNo || '-'}</td>
@@ -143,14 +143,14 @@ const Awarded = () => {
       </div>
 
       {/* PhD Undergoing */}
-      <div className="bg-[#D7CEC7] rounded-lg border-2 border-[#76323F] shadow-sm overflow-hidden">
-        <h2 className="text-xl sm:text-2xl font-bold text-[#76323F] px-3 sm:px-4 py-3 bg-gray-50">
+      <div className="bg-[#fff4dc] rounded-lg border-2 border-[#913c07] shadow-sm overflow-hidden">
+        <h2 className="text-xl sm:text-2xl font-bold text-[#913c07] px-3 sm:px-4 py-3 bg-gray-50">
           Ph.D. Undergoing
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm sm:text-base">
             <thead>
-              <tr className="bg-[#565656]">
+              <tr className="bg-[#913c07]">
                 <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">S.No.</th>
                 <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Name</th>
                 <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Year</th>
@@ -158,7 +158,7 @@ const Awarded = () => {
             </thead>
             <tbody>
               {phdUndergoing.map((student, index) => (
-                <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
+                <tr key={index} className="border-b border-secondary/20 hover:bg-bgColorDark">
                   <td className="px-3 sm:px-4 py-2 sm:py-3">{index + 1}</td>
                   <td className="px-3 sm:px-4 py-2 sm:py-3">{student.name}</td>
                   <td className="px-3 sm:px-4 py-2 sm:py-3">{student.year}</td>
@@ -170,14 +170,14 @@ const Awarded = () => {
       </div>
 
       {/* M.Sc. Dissertation Awarded */}
-      <div className="bg-[#D7CEC7] rounded-lg border-2 border-[#76323F] shadow-sm overflow-hidden">
-        <h2 className="text-xl sm:text-2xl font-bold text-[#76323F] px-3 sm:px-4 py-3 bg-gray-50">
+      <div className="bg-[#fff4dc] rounded-lg border-2 border-[#913c07] shadow-sm overflow-hidden">
+        <h2 className="text-xl sm:text-2xl font-bold text-[#913c07] px-3 sm:px-4 py-3 bg-gray-50">
           M.Sc. Dissertation Awarded
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm sm:text-base">
             <thead>
-              <tr className="bg-[#565656]">
+              <tr className="bg-[#913c07]">
                 <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">S.No.</th>
                 <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Name</th>
                 <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Roll No.</th>
@@ -186,7 +186,7 @@ const Awarded = () => {
             </thead>
             <tbody>
               {mscAwarded.map((student, index) => (
-                <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
+                <tr key={index} className="border-b border-secondary/20 hover:bg-bgColorDark">
                   <td className="px-3 sm:px-4 py-2 sm:py-3">{index + 1}</td>
                   <td className="px-3 sm:px-4 py-2 sm:py-3">{student.name}</td>
                   <td className="px-3 sm:px-4 py-2 sm:py-3">{student.rollNo || '-'}</td>
@@ -202,3 +202,7 @@ const Awarded = () => {
 };
 
 export default Awarded;
+
+
+
+

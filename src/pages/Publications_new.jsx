@@ -48,15 +48,15 @@ const Publications = () => {
   ];
 
   return (
-    <div className="border border-[#76323F] p-3 sm:p-4 md:p-6 bg-[#D7CEC7]">
-      <h2 className="text-2xl sm:text-3xl font-semibold text-[#76323F] mb-4">
+    <div className="border border-[#913c07] p-3 sm:p-4 md:p-6 bg-[#fff4dc]">
+      <h2 className="text-2xl sm:text-3xl font-semibold text-[#913c07] mb-4">
         Publications
       </h2>
 
       <div className="overflow-x-auto -mx-3 sm:mx-0">
-        <table className="w-full border-collapse text-black min-w-160 sm:min-w-0">
+        <table className="w-full border-collapse text-secondary min-w-160 sm:min-w-0 font-primary">
           <thead>
-            <tr className="border-t border-b border-[#565656] font-semibold text-left">
+            <tr className="border-t border-b border-[#913c07] font-semibold text-left">
               <th className="py-3 w-12 sm:w-16 px-2 sm:px-0 text-sm sm:text-base">S. No.</th>
               <th className="py-3 px-2 sm:px-0 text-sm sm:text-base">Title</th>
               <th className="py-3 w-32 sm:w-40 text-center px-2 sm:px-0 text-sm sm:text-base">Year</th>
@@ -69,8 +69,8 @@ const Publications = () => {
               key={pub.id}
               className="
                 group
-                border-b border-[#76323F]
-                hover:bg-[#76323F]
+                border-b border-[#913c07]
+                hover:bg-[#913c07]
                 hover:text-white
                 transition-colors
               "
@@ -110,8 +110,8 @@ const Publications = () => {
                         flex items-center justify-center
                         w-6 h-6 sm:w-8 sm:h-8
                         rounded-md
-                        border border-[#76323F]
-                        text-[#76323F]
+                        border border-[#913c07]
+                        text-[#913c07]
                         cursor-pointer
                         transition-all
 
@@ -135,3 +135,7 @@ const Publications = () => {
 };
 
 export default Publications;
+
+
+
+

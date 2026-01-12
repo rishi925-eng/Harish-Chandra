@@ -1,9 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #565656;
+  --color-primary: #913c07;
+  --color-secondary: #563c29;
+  --color-bg: #fff4dc;
+  --color-primary-light: #b04a09;
+  --color-primary-dark: #6b2d05;
+  --color-secondary-light: #6e4d37;
+  --color-secondary-dark: #3e2b1f;
+  --color-bg-dark: #f5e8c0;
+  --color-accent: #c45b0a;
+}
+
+* {
+  font-family: 'Belleza', sans-serif;
+}
+
+body {
+  font-family: 'Belleza', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alegreya', serif;
+  color: var(--color-primary);
+}
+
+p, span, div, li, a, td, th, label, input, textarea, button {
+  font-family: 'Belleza', sans-serif;
+}
+
+.font-primary {
+  font-family: 'Belleza', sans-serif !important;
+}
+
+.font-secondary {
+  font-family: 'Alegreya', serif !important;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  table {
+    font-size: 0.75rem;
+  }
+  
+  td, th {
+    padding: 0.5rem 0.25rem !important;
+  }
+}
+
+/* Touch-friendly buttons and links */
+a, button {
+  -webkit-tap-highlight-color: rgba(145, 60, 7, 0.2);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better table overflow on mobile */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
 }
 
 .bg-theme-primary {
   background-color: var(--color-primary);
+}
+
+.bg-theme-secondary {
+  background-color: var(--color-secondary);
+}
+
+.text-theme-primary {
+  color: var(--color-primary);
+}
+
+.text-theme-secondary {
+  color: var(--color-secondary);
 }

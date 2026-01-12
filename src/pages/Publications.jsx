@@ -48,50 +48,50 @@ const Publications = () => {
   ];
 
   return (
-    <div className="p-3 sm:p-4 md:p-6 bg-[#D7CEC7]">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#76323F] mb-4 sm:mb-6">
+    <div className="p-2 sm:p-4 md:p-6 bg-[#fff4dc]">
+      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#913c07] mb-3 sm:mb-4 md:mb-6">
         Publications
       </h1>
 
-      <div className="bg-[#D7CEC7] rounded-lg border-2 border-[#76323F] shadow-sm overflow-hidden">
+      <div className="bg-[#fff4dc] rounded-lg border-2 border-[#913c07] shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-sm sm:text-base">
+          <table className="w-full text-xs sm:text-sm md:text-base">
             <thead>
-              <tr className="bg-[#565656]">
-                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">S.No.</th>
-                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Title</th>
-                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Year</th>
-                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-white">Link</th>
+              <tr className="bg-[#913c07]">
+                <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-left font-semibold text-white whitespace-nowrap">S.No.</th>
+                <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-left font-semibold text-white">Title</th>
+                <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-left font-semibold text-white whitespace-nowrap">Year</th>
+                <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-left font-semibold text-white whitespace-nowrap">Link</th>
               </tr>
             </thead>
             <tbody>
               {publications.length > 0 ? (
                 publications.map((pub, index) => (
-                  <tr key={pub.id} className="border-b border-gray-200 hover:bg-gray-50">
-                    <td className="px-3 sm:px-4 py-2 sm:py-3">{index + 1}</td>
-                    <td className="px-3 sm:px-4 py-2 sm:py-3">
-                      <span className="text-[#0f172a]">{pub.title}</span>
+                  <tr key={pub.id} className="border-b border-secondary/20 hover:bg-bgColorDark">
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 whitespace-nowrap">{index + 1}</td>
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3">
+                      <span className="text-[#563c29] text-xs sm:text-sm md:text-base">{pub.title}</span>
                     </td>
-                    <td className="px-3 sm:px-4 py-2 sm:py-3">{pub.year}</td>
-                    <td className="px-3 sm:px-4 py-2 sm:py-3 text-center">
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 whitespace-nowrap">{pub.year}</td>
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 text-center">
                       {pub.link && pub.link.trim() ? (
                         <a 
                           href={pub.link} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="inline-flex items-center justify-center w-8 h-8 bg-[#76323F] text-white rounded-full hover:bg-[#565656] transition-colors duration-300"
+                          className="inline-flex items-center justify-center w-8 h-8 bg-[#913c07] text-white rounded-full hover:bg-[#913c07] transition-colors duration-300"
                         >
                           <ExternalLink size={16} />
                         </a>
                       ) : (
-                        <span className="text-gray-400">-</span>
+                        <span className="text-secondary/50 font-primary">-</span>
                       )}
                     </td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan="4" className="px-3 sm:px-4 py-8 text-center text-gray-500">
+                  <td colSpan="4" className="px-3 sm:px-4 py-8 text-center text-secondary/70 font-primary">
                     No publications added yet.
                   </td>
                 </tr>
@@ -105,3 +105,7 @@ const Publications = () => {
 };
 
 export default Publications;
+
+
+
+
