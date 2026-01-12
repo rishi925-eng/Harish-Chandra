@@ -37,14 +37,17 @@ const Publications = () => {
     { id: 33, title: "Modular Group Algebras with Small Upper Lie Nilpotency Index", year: 2020, link: "https://doi.org/10.1166/asem.2020.2517" },
     { id: 34, title: "Relationship Between Rising Phase of Solar Cycle 23rd and 24th with Respect to Geoeffectiveness", year: 2020, link: "https://doi.org/10.1166/asem.2020.2518" },
     { id: 35, title: "Group Algebras of Lie Nilpotency Index 14", year: 2020, link: "https://doi.org/10.1142/S1793557120500886" },
-    { id: 36, title: "Solar flares associated coronal mass ejection accompanied with DH type II radio burst in relation with interplanetary magnetic field, geomagnetic storms and cosmic ray intensity", year: 2018, link: "https://doi.org/10.1016/j.newast.2017.10.001" },
-    { id: 37, title: "Solar flare associated coronal mass ejections causing geo-effectiveness and Forbush decreases", year: 2017, link: "https://doi.org/10.1007/s10509-017-3024-0" },
-    { id: 38, title: "Generalization of Mittag - Leffler Function and It's Properties", year: 2017, link: " " },
-    { id: 39, title: "Solar flares associated coronal mass ejections in case of type II radio bursts", year: 2016, link: "https://doi.org/10.1007/s10509-016-2857-2" },
-    { id: 40, title: "Strongly Lie Nilpotent Group Algebras of Index at Most 8", year: 2014, link: "https://doi.org/10.1142/S0219498814500443" },
-    { id: 41, title: "On Group Algebras with Unit Groups of Derived Length Three in Characteristic Three", year: 2013, link: "https://doi.org/10.5486/PMD.2013.5461" },
-    { id: 42, title: "Lie Solvable Group Algebras of Derived Length Three in Characteristic Three", year: 2012, link: "https://doi.org/10.1142/S0219498812500983" },
-    { id: 43, title: "Group Algebras with Unit Groups of Derived Length Three", year: 2010, link: "https://doi.org/10.1142/S0219498810003938" }
+    { id: 36, title: "IoT based malaria website model using Digital Binary Code: A Mathematical Study, 2024 International Conference on IoT, Communication and Automation Technology (ICICAT), Gorakhpur, India, 2024, pp. 1671-1676, doi: 10.1109/ICICAT62666.2024.10923427", year: 2025, link: "https://doi.org/10.1109/ICICAT62666.2024.10923427" },
+    { id: 37, title: "An efficient and secure undeniable signature scheme based on Ring learning with error, International Journal of Ad Hoc and Ubiquitous Computing (Accepted, SCIE, IF=0.7)", year: 2025, link: " " },
+    { id: 38, title: "Solar flares associated coronal mass ejection accompanied with DH type II radio burst in relation with interplanetary magnetic field, geomagnetic storms and cosmic ray intensity", year: 2018, link: "https://doi.org/10.1016/j.newast.2017.10.001" },
+    { id: 39, title: "Solar flares associated coronal mass ejections causing geo-effectiveness and Forbush decreases", year: 2017, link: "https://doi.org/10.1007/s10509-017-3024-0" },
+    { id: 40, title: "Generalization of Mittag - Leffler Function and It's Properties", year: 2017, link: " " },
+    { id: 41, title: "Solar flares associated coronal mass ejections in case of type II radio bursts", year: 2016, link: "https://doi.org/10.1007/s10509-016-2857-2" },
+    { id: 42, title: "Strongly Lie Nilpotent Group Algebras of Index at Most 8", year: 2014, link: "https://doi.org/10.1142/S0219498814500443" },
+    { id: 43, title: "Units group of semisimple group algebra of groups of order 36, Annales Mathematicae et Informaticae, DOI: 10.33039/ami.2025.10.014 (ESCI, SJR, Scopus)", year: 2025, link: "https://ami.uni-eszterhazy.hu" },
+    { id: 44, title: "On Group Algebras with Unit Groups of Derived Length Three in Characteristic Three", year: 2013, link: "https://doi.org/10.5486/PMD.2013.5461" },
+    { id: 45, title: "Lie Solvable Group Algebras of Derived Length Three in Characteristic Three", year: 2012, link: "https://doi.org/10.1142/S0219498812500983" },
+    { id: 46, title: "Group Algebras with Unit Groups of Derived Length Three", year: 2010, link: "https://doi.org/10.1142/S0219498810003938" }
   ];
 
   return (

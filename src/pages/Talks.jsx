@@ -9,13 +9,13 @@ const Talks = () => {
     {
       title: "Invited talk on LaTeX",
       date: "February 28, 2014",
-      venue: "Refresher Course in Math's, Statistics, Computer Science & Astronomy, HRD Center Lucknow University, Lucknow",
+      venue: "Refresher Course in Math's, Statistics, Computer Science & Astronomy (February 14 – March 07, 2014), HRD Center Lucknow University, Lucknow",
       audience: "Refresher Course Participants"
     },
     {
       title: "Invited Talk on LaTeX",
       date: "March 3, 2014",
-      venue: "Refresher Course in Math's, Statistics, Computer Science & Astronomy, HRD Center Lucknow University, Lucknow",
+      venue: "Refresher Course in Math's, Statistics, Computer Science & Astronomy (February 14 – March 07, 2014), HRD Center Lucknow University, Lucknow",
       audience: "Refresher Course Participants"
     },
     {
@@ -33,13 +33,13 @@ const Talks = () => {
     {
       title: "LaTeX Typesetting",
       date: "January 14, 2019",
-      venue: "Refresher Course on Maths, Statistics, Computer Science & Astronomy, HRD Center Lucknow University, Lucknow",
+      venue: "Refresher Course on Maths, Statistics, Computer Science & Astronomy (January 2 – January 23, 2019), HRD Center Lucknow University, Lucknow",
       audience: "Refresher Course Participants"
     },
     {
       title: "Presentation with LaTeX",
       date: "January 22, 2019",
-      venue: "Refresher Course on Maths, Statistics, Computer Science & Astronomy, HRD Center Lucknow University, Lucknow",
+      venue: "Refresher Course on Maths, Statistics, Computer Science & Astronomy (January 2 – January 23, 2019), HRD Center Lucknow University, Lucknow",
       audience: "Refresher Course Participants"
     },
     {
@@ -63,7 +63,7 @@ const Talks = () => {
     {
       title: "Typesetting with LaTeX",
       date: "February 29, 2020",
-      venue: "Refresher Course on Mathematics, Statistics, Computer Science & Astronomy (MD), HRD Center Lucknow University, Lucknow",
+      venue: "Refresher Course on Mathematics, Statistics, Computer Science & Astronomy (MD) (February 17 – February 29, 2020), HRD Center Lucknow University, Lucknow",
       audience: "Refresher Course Participants"
     },
     {
@@ -75,7 +75,7 @@ const Talks = () => {
     {
       title: "An Introduction to SciLab",
       date: "July 8, 2021",
-      venue: "Seven Days Online Workshop on Research Methodology in Mathematical Sciences, Department of Mathematics and Statistics, DDU Gorakhpur University",
+      venue: "Seven Days Online Workshop on Research Methodology in Mathematical Sciences (July 4-10, 2021), Department of Mathematics and Statistics, DDU Gorakhpur University",
       audience: "Workshop Participants (Online)"
     },
     {
@@ -87,31 +87,37 @@ const Talks = () => {
     {
       title: "LaTeX: Scientific Document Preparation System",
       date: "March 27, 2022",
-      venue: "One week workshop on Scientific Computing in Mathematical Sciences, Department of Mathematics and Statistics, DDU Gorakhpur University, Gorakhpur",
+      venue: "One week workshop on Scientific Computing in Mathematical Sciences (March 23-28, 2022), Department of Mathematics and Statistics, DDU Gorakhpur University, Gorakhpur, UP INDIA",
+      audience: "Workshop Participants"
+    },
+    {
+      title: "LaTeX: Scientific Document Preparation System",
+      date: "March 27, 2022",
+      venue: "One week workshop on Scientific Computing in Mathematical Sciences (March 23-28, 2022), Department of Mathematics and Statistics, DDU Gorakhpur University, Gorakhpur, UP INDIA",
       audience: "Workshop Participants"
     },
     {
       title: "Scientific Typesetting",
       date: "December 8, 2022",
-      venue: "One week ACITE-MMMUT MoU Activities Faculty Development Programme on Modern Research Methods and Analytical Tools (MRMAT-2022), Department of Humanities and Management Science, MMMUT, Gorakhpur",
+      venue: "One week ACITE-MMMUT MoU Activities Faculty Development Programme on Modern Research Methods and Analytical Tools (MRMAT-2022) (December 05-09, 2022), Department of Humanities and Management Science, MMMUT, Gorakhpur",
       audience: "Faculty Members"
     },
     {
       title: "Creating a Presentation with LaTeX",
       date: "December 14, 2022",
-      venue: "One week ACITE-MMMUT MoU Activities Faculty Development Programme on Recent Advances in Applied Mathematics using Mathematical Tools (RAAMMT-2022), Department of Mathematics and Scientific Computing, MMMUT, Gorakhpur",
+      venue: "One week ACITE-MMMUT MoU Activities Faculty Development Programme on Recent Advances in Applied Mathematics using Mathematical Tools (RAAMMT-2022) (December 14-18, 2022), Department of Mathematics and Scientific Computing, MMMUT, Gorakhpur",
       audience: "Faculty Members"
     },
     {
       title: "Turnitin's Software for new faculty members",
       date: "April 22, 2025",
-      venue: "Two weeks Faculty Induction Programme, Madan Mohan Malaviya University of Technology, Gorakhpur",
+      venue: "Two weeks Faculty Induction Programme (April 7-27, 2025), Madan Mohan Malaviya University of Technology, Gorakhpur, UP, India",
       audience: "New Faculty Members"
     },
     {
       title: "Security protocol for new faculty members",
       date: "April 17, 2025",
-      venue: "Two week Faculty Induction Programme, Madan Mohan Malaviya University of Technology, Gorakhpur",
+      venue: "Two weeks Faculty Induction Programme (April 7-27, 2025), Madan Mohan Malaviya University of Technology, Gorakhpur, UP, India",
       audience: "New Faculty Members"
     }
   ];
