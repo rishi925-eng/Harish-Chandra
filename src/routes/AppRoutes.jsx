@@ -16,6 +16,7 @@ import Contact from "../pages/ContactMe";
 import Books from "../pages/books";
 import Software from "../pages/Software";
 import Resources from "../pages/Resources";
+import WebLinks from "../pages/WebLinks"
 
 
 const AppRoutes = () => {
@@ -38,6 +39,7 @@ const AppRoutes = () => {
       <Route path="/books" element={<Books />} />
       <Route path="/software" element={<Software />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/web-links" element={<WebLinks />} />
     </Routes>
   );
 };
