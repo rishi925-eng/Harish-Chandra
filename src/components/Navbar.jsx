@@ -150,6 +150,7 @@ const Navbar = () => {
 
             {docsOpen && (
               <div 
+                className="absolute top-full left-0 mt-0 w-48 bg-[#563c29] shadow-lg rounded-md border border-[#913c07] overflow-hidden z-50"
                 style={{ animation: 'slideFromLeft 0.3s ease-out' }}
               >
                 <DropdownItem to="/books" icon={<Book size={16} />} label="Books" />
