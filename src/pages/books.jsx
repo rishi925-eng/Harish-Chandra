@@ -2,7 +2,7 @@ import React from "react";
 
 const Books = () => {
   return (
-    <div className="border border-[#913c07] p-2 sm:p-4 md:p-6 bg-[#fff4dc] min-h-screen">
+    <div className="border border-[#913c07] p-2 sm:p-4 md:p-6 bg-[#fff4dc] w-fit mx-auto my-8 shadow-md">
       
       {/*Header Section*/}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#913c07] mb-2 sm:mb-3">
