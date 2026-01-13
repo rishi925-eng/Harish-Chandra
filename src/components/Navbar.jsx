@@ -19,7 +19,8 @@ import {
   Image,
   FileText, 
   Book, 
-  Cpu
+  Cpu,
+  Globe
 } from "lucide-react";
 
 const Navbar = () => {
@@ -166,7 +167,8 @@ const Navbar = () => {
                 <DropdownItem to="/software" icon={<Cpu size={16} />} label="Software" />
               </div>
             )}
-          </div>        
+          </div>    
+          <NavItem to="/resources" icon={<Globe size={16} />} label="Resources" />    
         </div>
 
         {/* Mobile Hamburger */}
