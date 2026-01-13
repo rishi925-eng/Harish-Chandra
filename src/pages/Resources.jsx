@@ -1,0 +1,139 @@
+import React from "react";
+
+const websites = [
+  {
+    url: "https://crazyproject.wordpress.com/",
+    label: "crazyproject.wordpress.com/",
+    note: "Very useful site. It contains the solution of the famous book Dummit and Foote",
+  },
+];
+
+const bookSources = [
+  "http://en.bookfi.org",
+  "http://www.bookboon.com",
+  "http://www.getfreeebooks.com/",
+  "http://www.onlinefreeebooks.net/",
+  "http://www.freebookspot.es/",
+];
+
+const downloads = [
+  {
+    name: "Adobe Reader X",
+    desc: "Allows you to open and view .pdf files.",
+    link: "https://get.adobe.com/reader/",
+  },
+  {
+    name: "Adobe Flash Player",
+    desc: "Allows you to view flash animations, videos, and play flash games.",
+    link: "https://www.adobe.com/products/flashplayer/end-of-life.html",
+  },
+  {
+    name: "Microsoft PowerPoint viewer",
+    desc: "Allows you to open and view slide shows created with Power Point.",
+    link: "https://www.microsoft.com/en-us/microsoft-365/free-office-online-for-the-web",
+  },
+  {
+    name: "Microsoft Word viewer",
+    desc: "Allows you to open, copy, view, and print documents created with Word.",
+    link: "https://www.microsoft.com/en-us/microsoft-365/free-office-online-for-the-web",
+  },
+  {
+    name: "Java",
+    desc: "Java software allows your computer to run online games and applications.",
+    link: "https://www.java.com/download/",
+  },
+];
+
+const Resources = () => {
+  return (
+    <div className="border border-[#913c07] p-6 bg-[#fff4dc] w-fit mx-auto my-8 shadow-sm font-primary">
+      {/*Header*/}
+      <h2 className="text-2xl md:text-3xl font-semibold text-[#913c07] mb-6 border-b border-[#913c07]/30 pb-2">
+        RESOURCES
+      </h2>
+
+      {/*Websites Section*/}
+      <section className="mb-8">
+        <h3 className="text-lg font-bold text-[#913c07] mb-2">Websites</h3>
+        {websites.map(({ url, label, note }) => (
+          <div key={url} className="pl-2">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#563c29] hover:text-[#913c07] font-medium block hover:underline"
+            >
+              {label}
+            </a>
+            <p className="text-[#563c29] text-sm italic mt-1">{note}</p>
+          </div>
+        ))}
+      </section>
+
+      {/*Print Sources Section*/}
+      <section className="mb-8">
+        <h3 className="text-lg font-bold text-[#913c07] mb-2">Print Sources (Books)</h3>
+        <p className="text-[#563c29] text-sm mb-3">
+          Following websites are very useful for books:
+        </p>
+        <ul className="space-y-1.5 pl-2">
+          {bookSources.map((url) => (
+            <li key={url}>
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#563c29] hover:text-[#913c07] text-sm hover:underline break-all"
+              >
+                {url}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/*Helpful Downloads Section*/}
+      <section>
+        <h3 className="text-lg font-bold text-[#913c07] mb-2">Helpful Downloads</h3>
+        <p className="text-[#563c29] text-sm mb-4">
+          Below you will find links to download free helpful software for your home computer:
+        </p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="border-t border-b border-[#913c07] text-left text-[#913c07] font-bold">
+                <th className="py-2 px-3">Software</th>
+                <th className="py-2 px-3">Purpose</th>
+                <th className="py-2 px-3">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              {downloads.map(({ name, desc, link }) => (
+                <tr
+                  key={name}
+                  className="border-b border-[#913c07]/20 hover:bg-[#913c07]/5 transition-colors"
+                >
+                  <td className="py-3 px-3 font-semibold text-[#913c07]">{name}</td>
+                  <td className="py-3 px-3 text-[#563c29] leading-tight">{desc}</td>
+                  <td className="py-3 px-3">
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#563c29] font-bold hover:text-[#913c07] hover:underline whitespace-nowrap"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Resources;
