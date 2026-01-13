@@ -17,12 +17,17 @@ import {
   Briefcase,
   Trophy,
   Image,
+  FileText, 
+  Book, 
+  Cpu
 } from "lucide-react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [researchOpen, setResearchOpen] = useState(false);
   const [mobileResearchOpen, setMobileResearchOpen] = useState(false);
+  const [docsOpen, setDocsOpen] = useState(false);
+  const [mobileDocsOpen, setMobileDocsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-[#913c07] shadow-sm relative group">
@@ -124,6 +129,34 @@ const Navbar = () => {
           <NavItem to="/awarded" icon={<GraduationCap size={16} />} label="Awarded" />
           <NavItem to="/gallery" icon={<Image size={16} />} label="Gallery" />
           <NavItem to="/contact" icon={<Phone size={16} />} label="Contact" />
+
+          {/* Documents Dropdown */}
+          <div 
+            className="relative group/docs"
+            onMouseEnter={() => setDocsOpen(true)}
+            onMouseLeave={() => setDocsOpen(false)}
+          >
+            <button
+              
+            >
+              <span className="relative z-10 transition-transform duration-300 group-hover:rotate-6">
+                <FileText size={16} />
+              </span>
+              <span className="relative z-10 transition-all duration-300 group-hover:font-semibold">
+                Documents
+              </span>
+              <ChevronDown size={14} className="relative z-10" />
+            </button>
+
+            {docsOpen && (
+              <div 
+                style={{ animation: 'slideFromLeft 0.3s ease-out' }}
+              >
+                <DropdownItem to="/books" icon={<Book size={16} />} label="Books" />
+                <DropdownItem to="/software" icon={<Cpu size={16} />} label="Software" />
+              </div>
+            )}
+          </div>        
         </div>
 
         {/* Mobile Hamburger */}
