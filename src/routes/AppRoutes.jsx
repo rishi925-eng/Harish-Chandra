@@ -13,7 +13,9 @@ import Achievements from "../pages/Achievements";
 import Awarded from "../pages/Awarded";
 import Gallery from "../pages/Gallery";
 import Contact from "../pages/ContactMe";
-import Books from "./pages/Books";
+import Books from "../pages/books";
+import Software from "../pages/Software";
+
 
 const AppRoutes = () => {
   return (
@@ -32,8 +34,8 @@ const AppRoutes = () => {
       <Route path="/awarded" element={<Awarded />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/Books" element={<Books />} />
-      <Route path="/Software" element={<Software />} />
+      <Route path="/books" element={<Books />} />
+      <Route path="/software" element={<Software />} />
     </Routes>
   );
 };
