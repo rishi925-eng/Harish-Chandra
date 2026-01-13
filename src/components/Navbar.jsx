@@ -137,7 +137,16 @@ const Navbar = () => {
             onMouseLeave={() => setDocsOpen(false)}
           >
             <button
-              
+             className="
+                      group relative flex items-center gap-1 px-3 py-2 rounded-md
+                      text-white font-primary
+                      hover:bg-white/10
+                      transition-all duration-300 ease-out
+                      before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2
+                      before:w-0 before:h-0.5 before:bg-white
+                      before:transition-all before:duration-300 before:ease-out
+                      hover:before:w-full
+                    " 
             >
               <span className="relative z-10 transition-transform duration-300 group-hover:rotate-6">
                 <FileText size={16} />
