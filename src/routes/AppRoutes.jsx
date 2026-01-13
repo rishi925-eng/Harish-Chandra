@@ -15,6 +15,7 @@ import Gallery from "../pages/Gallery";
 import Contact from "../pages/ContactMe";
 import Books from "../pages/books";
 import Software from "../pages/Software";
+import Resources from "../pages/Resources";
 
 
 const AppRoutes = () => {
@@ -36,6 +37,7 @@ const AppRoutes = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/books" element={<Books />} />
       <Route path="/software" element={<Software />} />
+      <Route path="/resources" element={<Resources />} />
     </Routes>
   );
 };
