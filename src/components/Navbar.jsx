@@ -222,6 +222,33 @@ const Navbar = () => {
           <MobileNavItem to="/awarded" label="Awarded" icon={<GraduationCap size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/gallery" label="Gallery" icon={<Image size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/contact" label="Contact" icon={<Phone size={16} />} onClick={() => setOpen(false)} />
+          {/* Mobile Documents Dropdown */}
+            <div className="w-full block">
+              <button
+                onClick={() => setMobileDocsOpen(!mobileDocsOpen)}
+                className="
+                  w-full text-left group relative flex items-center gap-3 px-6 py-3 overflow-hidden block
+                  text-white font-primary
+                  hover:bg-[#913c07]
+                  transition-all duration-300 ease-out
+                "
+              >
+                <span className="relative z-10 transition-transform duration-300 group-hover:rotate-6">
+                  <FileText size={16} />
+                </span>
+                <span className="relative z-10 inline-block transition-all duration-300 flex-grow">
+                  Documents
+                </span>
+                <ChevronDown size={16} className={`transition-transform duration-300 ${mobileDocsOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {mobileDocsOpen && (
+                <div className="bg-[#3d2a1f]">
+                  <MobileSubNavItem to="/books" label="Books" icon={<Book size={16} />} onClick={() => setOpen(false)} />
+                  <MobileSubNavItem to="/software" label="Software" icon={<Cpu size={16} />} onClick={() => setOpen(false)} />
+                </div>
+              )}
+            </div>
         </div>
       )}
     </header>
