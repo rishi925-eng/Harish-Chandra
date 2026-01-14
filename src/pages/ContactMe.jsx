@@ -2,8 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="border border-[#913c07] p-3 sm:p-4 md:p-6 bg-[#fff4dc] text-secondary font-primary">
-
+    <div className=" border border-[#913c07] p-3 sm:p-4 md:p-6 bg-[#fff4dc] text-secondary font-primary">
       {/* Title */}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#913c07] mb-4 sm:mb-6">
         Contact Details
@@ -22,39 +21,44 @@ const Contact = () => {
           Dr. Harish Chandra
         </h3>
 
-        <p className="text-xs sm:text-sm mb-3 sm:mb-4">
-          Assistant Professor
-        </p>
+        <p className="text-xs sm:text-sm mb-3 sm:mb-4">Assistant Professor</p>
 
         <div className="space-y-1 text-xs sm:text-sm mb-4 sm:mb-6">
           <p>Department of Mathematics and Scientific Computing</p>
           <p>Madan Mohan Malaviya University of Technology</p>
-          <p>Gorakhpur, Uttar Pradesh – 273010, India</p>
+          <p>
+            Gorakhpur, Uttar Pradesh –{" "}
+            <span className="!font-mono tabular-nums">273010</span>, India
+          </p>
         </div>
 
-        <div className="flex items-start gap-2 sm:gap-4 mb-3 sm:mb-4">
+        <div className="flex items-start gap-4 sm:gap-4 mb-3 sm:mb-4">
           <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg flex-shrink-0">
             <Phone size={16} className="sm:w-[18px] sm:h-[18px]" />
           </div>
-          <p className="text-xs sm:text-sm break-words">
-            +91-9450565757; +91-9235501647
+          <p className="!font-mono tabular-nums text-xs sm:text-sm break-words">
+            +91-9450565757
+            <br /> +91-9235501647
           </p>
         </div>
 
-        <div className="flex items-start gap-4 mb-4">
-          <div className="bg-white/20 p-2 rounded-lg">
+        <div className="flex items-start gap-4 sm:gap-4 mb-3 sm:mb-4">
+          <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg flex-shrink-0">
             <Mail size={18} />
           </div>
           <p className="text-sm underline underline-offset-2">
-            hcmsc@mmmut.ac.in; hc19856@gmail.com
+            official: hcmsc@mmmut.ac.in;
+            <br />
+            personal: hc<span className="!font-mono tabular-nums">19856</span>
+            @gmail.com
           </p>
         </div>
 
-        <div className="flex items-start gap-4">
-          <div className="bg-white/20 p-2 rounded-lg">
+        <div className="flex items-start gap-4 sm:gap-4 mb-3 sm:mb-4">
+          <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg flex-shrink-0">
             <MapPin size={18} />
           </div>
-          <p className="text-sm">
+          <p className="text-sm pt-1.5 !font-mono tabular-nums">
             26°43′53.2″N 83°25′59.3″E
           </p>
         </div>
