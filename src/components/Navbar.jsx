@@ -19,12 +19,18 @@ import {
   Image,
   FileText,
   Calendar,
+  Book,
+  Cpu,
+  Globe,
+  Link as LinkIcon
 } from "lucide-react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [researchOpen, setResearchOpen] = useState(false);
   const [mobileResearchOpen, setMobileResearchOpen] = useState(false);
+  const [docsOpen, setDocsOpen] = useState(false);
+  const [mobileDocsOpen, setMobileDocsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-[#913c07] shadow-sm relative group">
@@ -75,7 +81,7 @@ const Navbar = () => {
           <NavItem to="/profile" icon={<User size={13} />} label="Profile" />
           <NavItem to="/teaching" icon={<GraduationCap size={13} />} label="Teaching" />
           <NavItem to="/assignments" icon={<FileText size={13} />} label="Assignments" />
-          <NavItem to="/class-calendar" icon={<Calendar size={13} />} label="Calendar" />
+          <NavItem to="/class-calendar" icon={<Calendar size={13} />} label="Class Calendar" />
           
           {/* Research Dropdown */}
           <div 
@@ -128,6 +134,50 @@ const Navbar = () => {
           <NavItem to="/awarded" icon={<GraduationCap size={13} />} label="Awarded" />
           <NavItem to="/gallery" icon={<Image size={13} />} label="Gallery" />
           <NavItem to="/contact" icon={<Phone size={13} />} label="Contact" />
+
+          {/* Documents Dropdown */}
+          <div 
+            className="relative group/docs"
+            onMouseEnter={() => setDocsOpen(true)}
+            onMouseLeave={() => setDocsOpen(false)}
+          >
+            <button
+              className="
+                group relative flex items-center gap-0.5 px-1.5 py-1 rounded-md
+                text-white font-primary text-xs whitespace-nowrap
+                hover:bg-white/10
+                hover:shadow-md
+                transition-all duration-300 ease-out
+                before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2
+                before:w-0 before:h-0.5 before:bg-white
+                before:transition-all before:duration-300 before:ease-out
+                hover:before:w-full
+                after:absolute after:inset-0 after:rounded-md after:bg-white/5
+                after:scale-0 after:transition-transform after:duration-300
+                hover:after:scale-100
+              "
+            >
+              <span className="relative z-10 transition-transform duration-300 group-hover:rotate-6">
+                <FileText size={13} />
+              </span>
+              <span className="relative z-10 transition-all duration-300 group-hover:font-semibold">
+                Documents
+              </span>
+              <ChevronDown size={12} className="relative z-10" />
+            </button>
+
+            {docsOpen && (
+              <div 
+                className="absolute top-full left-0 mt-0 w-48 bg-[#563c29] shadow-lg rounded-md border border-[#913c07] overflow-hidden z-50"
+                style={{ animation: 'slideFromLeft 0.3s ease-out' }}
+              >
+                <DropdownItem to="/books" icon={<Book size={16} />} label="Books" />
+                <DropdownItem to="/software" icon={<Cpu size={16} />} label="Software" />
+              </div>
+            )}
+          </div>    
+          <NavItem to="/resources" icon={<Globe size={13} />} label="Resources" />
+          <NavItem to="/web-links" icon={<LinkIcon size={13} />} label="Links" />
         </div>
 
         {/* Mobile Hamburger */}
@@ -138,7 +188,6 @@ const Navbar = () => {
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
       </nav>
-
       {/* Mobile Menu */}
       {open && (
         <div className="lg:hidden bg-[#563c29] border-t shadow-md relative z-10 block">
@@ -162,7 +211,7 @@ const Navbar = () => {
               <span className="relative z-10 transition-transform duration-300 group-hover:rotate-6">
                 <FlaskConical size={16} />
               </span>
-              <span className="relative z-10 inline-block transition-all duration-300 flex-grow">
+              <span className="relative z-10 inline-block transition-all duration-300 grow">
                 Research
               </span>
               <ChevronDown size={16} className={`transition-transform duration-300 ${mobileResearchOpen ? 'rotate-180' : ''}`} />
@@ -185,6 +234,35 @@ const Navbar = () => {
           <MobileNavItem to="/awarded" label="Awarded" icon={<GraduationCap size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/gallery" label="Gallery" icon={<Image size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/contact" label="Contact" icon={<Phone size={16} />} onClick={() => setOpen(false)} />
+          {/* Mobile Documents Dropdown */}
+            <div className="w-full block">
+              <button
+                onClick={() => setMobileDocsOpen(!mobileDocsOpen)}
+                className="
+                  w-full text-left group relative flex items-center gap-3 px-6 py-3 overflow-hidden
+                  text-white font-primary
+                  hover:bg-[#913c07]
+                  transition-all duration-300 ease-out
+                "
+              >
+                <span className="relative z-10 transition-transform duration-300 group-hover:rotate-6">
+                  <FileText size={16} />
+                </span>
+                <span className="relative z-10 inline-block transition-all duration-300 grow">
+                  Documents
+                </span>
+                <ChevronDown size={16} className={`transition-transform duration-300 ${mobileDocsOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {mobileDocsOpen && (
+                <div className="bg-[#3d2a1f]">
+                  <MobileSubNavItem to="/books" label="Books" icon={<Book size={16} />} onClick={() => setOpen(false)} />
+                  <MobileSubNavItem to="/software" label="Software" icon={<Cpu size={16} />} onClick={() => setOpen(false)} />
+                </div>
+              )}
+            </div>
+            <MobileNavItem to="/resources" label="Resources" icon={<Globe size={16} />} onClick={() => setOpen(false)} />
+            <MobileNavItem to="/web-links" label="Web Links" icon={<LinkIcon size={16} />} onClick={() => setOpen(false)} />
         </div>
       )}
     </header>
@@ -224,7 +302,7 @@ const MobileNavItem = ({ to, label, onClick, icon }) => (
     onClick={onClick}
     className="
       group relative flex items-center gap-3 px-6 py-3 overflow-hidden
-      text-white w-full block font-primary
+      text-white w-full font-primary
       hover:bg-[#913c07] hover:text-white
       transition-all duration-300 ease-out
       before:absolute before:left-0 before:top-0 before:h-full before:w-1.5
@@ -273,7 +351,7 @@ const MobileSubNavItem = ({ to, label, onClick, icon }) => (
     onClick={onClick}
     className="
       group relative flex items-center gap-3 px-10 py-2.5 overflow-hidden
-      text-white text-sm bg-[#3d2a1f] w-full block font-primary
+      text-white text-sm bg-[#3d2a1f] w-full font-primary
       hover:bg-[#913c07] hover:text-white
       transition-all duration-300 ease-out
     "

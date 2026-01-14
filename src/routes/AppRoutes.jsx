@@ -15,6 +15,11 @@ import Achievements from "../pages/Achievements";
 import Awarded from "../pages/Awarded";
 import Gallery from "../pages/Gallery";
 import Contact from "../pages/ContactMe";
+import Books from "../pages/books";
+import Software from "../pages/Software";
+import Resources from "../pages/Resources";
+import WebLinks from "../pages/WebLinks"
+
 
 const AppRoutes = () => {
   return (
@@ -35,6 +40,10 @@ const AppRoutes = () => {
       <Route path="/awarded" element={<Awarded />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/books" element={<Books />} />
+      <Route path="/software" element={<Software />} />
+      <Route path="/resources" element={<Resources />} />
+      <Route path="/web-links" element={<WebLinks />} />
     </Routes>
   );
 };
