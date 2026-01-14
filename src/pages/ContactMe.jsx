@@ -46,11 +46,17 @@ const Contact = () => {
           <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg flex-shrink-0">
             <Mail size={18} />
           </div>
-          <p className="text-sm underline underline-offset-2">
-            official: hcmsc@mmmut.ac.in;
+          <p className="text-sm ">
+            official:{" "}
+            <span className="underline underline-offset-2">
+              hcmsc@mmmut.ac.in;
+            </span>
             <br />
-            personal: hc<span className="!font-mono tabular-nums">19856</span>
-            @gmail.com
+            personal:{" "}
+            <span className="underline underline-offset-2">
+              hc<span className="!font-mono tabular-nums">19856</span>{" "}
+              @gmail.com
+            </span>
           </p>
         </div>
 
@@ -68,7 +74,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-
-
-
