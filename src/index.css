@@ -41,6 +41,85 @@ p, span, div, li, a, td, th, label, input, textarea, button {
   font-family: 'Alegreya', serif !important;
 }
 
+/* Tabular numbers styling with proper alignment - Times New Roman for ALL numbers */
+* {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Apply Times New Roman to ALL elements that might contain numbers */
+td, th, .number, [class*="year"], [class*="date"], [class*="count"], [class*="index"],
+span, div, p, li, a, button, input, textarea, label, h1, h2, h3, h4, h5, h6 {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Specific styling for elements with numbers */
+td, th, .number, [class*="year"], [class*="date"], [class*="count"], [class*="index"] {
+  font-family: 'Times New Roman', Times, serif !important;
+  vertical-align: middle !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+}
+
+/* Apply Times New Roman to ALL table cells */
+table * {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+/* Ensure all table elements have consistent alignment */
+table {
+  border-collapse: collapse;
+}
+
+table td, table th {
+  vertical-align: middle !important;
+  text-align: center !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* Fix number alignment in all contexts */
+.number, td:first-child, [class*="year"] {
+  vertical-align: middle !important;
+  text-align: center !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* Ensure spans and divs containing numbers maintain alignment */
+span, div {
+  vertical-align: baseline;
+}
+
+/* Specific styling for table data cells with numbers */
+table tbody td {
+  vertical-align: middle !important;
+  text-align: center !important;
+  align-items: center !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+table thead th {
+  vertical-align: middle !important;
+  text-align: center !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* Apply to calendar, dates, and any numeric content */
+[class*="calendar"] *, [class*="Calendar"] *,
+[class*="date"] *, [class*="Date"] *,
+[class*="year"] *, [class*="Year"] *,
+[class*="month"] *, [class*="Month"] *,
+[class*="day"] *, [class*="Day"] * {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+/* Reset text alignment for title columns */
+table td:nth-child(2), table th:nth-child(2) {
+  text-align: left !important;
+}
+
 /* Mobile-specific improvements */
 @media (max-width: 640px) {
   table {

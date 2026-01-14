@@ -51,11 +51,13 @@ const ClassCalendar = () => {
           key={day}
           className={`
             p-2 sm:p-3 text-center border border-[#913c07]/20 rounded
+            flex items-center justify-center
             ${isToday(day) 
               ? 'bg-[#913c07] text-white font-bold shadow-md' 
               : 'bg-white text-secondary hover:bg-[#fff4dc] transition-colors'
             }
           `}
+          style={{ fontFamily: "'Times New Roman', Times, serif" }}
         >
           {day}
         </div>
