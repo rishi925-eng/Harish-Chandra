@@ -115,9 +115,10 @@ const Navbar = () => {
             
             {teachingOpen && (
               <div 
-                className="absolute top-full left-0 mt-0 w-48 bg-[#563c29] shadow-lg rounded-md border border-[#913c07] overflow-hidden z-50"
+                className="absolute top-full left-0 mt-0 w-44 bg-[#563c29] shadow-lg rounded-md border border-[#913c07] overflow-hidden z-50 group/box"
                 style={{ animation: 'slideFromLeft 0.3s ease-out' }}
               >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover/box:translate-x-[100%] transition-transform duration-700 pointer-events-none" />
                 <DropdownItem to="/teaching" icon={<GraduationCap size={16} />} label="Teaching" />
                 <DropdownItem to="/assignments" icon={<FileText size={16} />} label="Assignments" />
                 <DropdownItem to="/class-calendar" icon={<Calendar size={16} />} label="Class Calendar" />
@@ -160,9 +161,10 @@ const Navbar = () => {
             
             {researchOpen && (
               <div 
-                className="absolute top-full left-0 mt-0 w-64 bg-[#563c29] shadow-lg rounded-md border border-[#913c07] overflow-hidden z-50"
+                className="absolute top-full left-0 mt-0 w-56 bg-[#563c29] shadow-lg rounded-md border border-[#913c07] overflow-hidden z-50 group/box"
                 style={{ animation: 'slideFromLeft 0.3s ease-out' }}
               >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover/box:translate-x-[100%] transition-transform duration-700 pointer-events-none" />
                 <DropdownItem to="/research" icon={<FlaskConical size={16} />} label="Research Projects" />
                 <DropdownItem to="/publications" icon={<BookOpen size={16} />} label="Publications" />
                 <DropdownItem to="/workshops" icon={<Briefcase size={16} />} label="Workshop" />
@@ -209,9 +211,10 @@ const Navbar = () => {
             
             {achievementsOpen && (
               <div 
-                className="absolute top-full left-0 mt-0 w-48 bg-[#563c29] shadow-lg rounded-md border border-[#913c07] overflow-hidden z-50"
+                className="absolute top-full left-0 mt-0 w-44 bg-[#563c29] shadow-lg rounded-md border border-[#913c07] overflow-hidden z-50 group/box"
                 style={{ animation: 'slideFromLeft 0.3s ease-out' }}
               >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover/box:translate-x-[100%] transition-transform duration-700 pointer-events-none" />
                 <DropdownItem to="/achievements" icon={<Award size={16} />} label="Achievements" />
                 <DropdownItem to="/awarded" icon={<Trophy size={16} />} label="Awarded" />
               </div>
@@ -399,16 +402,17 @@ const DropdownItem = ({ to, icon, label }) => (
   <Link
     to={to}
     className="
-      group flex items-center gap-3 px-4 py-3 text-white font-primary
+      relative flex items-center gap-3 px-4 py-3 text-white font-primary
       hover:bg-[#913c07]
       transition-all duration-300
       border-b border-white/10 last:border-b-0
+      z-10 block w-full
     "
   >
-    <span className="text-white">
+    <span className="text-white relative z-10">
       {icon}
     </span>
-    <span className="transition-all duration-300 text-sm">
+    <span className="transition-all duration-300 text-sm relative z-10">
       {label}
     </span>
   </Link>
