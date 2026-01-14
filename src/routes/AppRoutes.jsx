@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import Teaching from "../pages/Teaching";
+import Assignments from "../pages/Assignments";
+import ClassCalendar from "../pages/ClassCalendar";
 import Research from "../pages/Research";
 import Publications from "../pages/Publications";
 import Workshops from "../pages/Workshops";
@@ -20,6 +22,8 @@ const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/teaching" element={<Teaching />} />
+      <Route path="/assignments" element={<Assignments />} />
+      <Route path="/class-calendar" element={<ClassCalendar />} />
       <Route path="/research" element={<Research />} />
       <Route path="/publications" element={<Publications />} />
       <Route path="/workshops" element={<Workshops />} />

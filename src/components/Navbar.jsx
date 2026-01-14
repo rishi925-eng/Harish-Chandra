@@ -17,6 +17,8 @@ import {
   Briefcase,
   Trophy,
   Image,
+  FileText,
+  Calendar,
 } from "lucide-react";
 
 const Navbar = () => {
@@ -55,23 +57,25 @@ const Navbar = () => {
         }
       `}</style>
       
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between relative z-10">
+      <nav className="max-w-7xl mx-auto px-3 sm:px-4 py-1.5 sm:py-2 flex items-center justify-between relative z-10">
 
         {/* Left: Logo */}
         <div>
-          <div className="text-lg sm:text-xl md:text-2xl font-secondary italic text-white">
+          <div className="text-sm sm:text-base md:text-lg font-secondary italic text-white">
             Dr. Harish Chandra
           </div>
-          <div className="text-xs sm:text-sm text-white font-primary">
+          <div className="text-[10px] sm:text-xs text-white font-primary">
             Assistant Professor
           </div>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-2 ml-auto">
-          <NavItem to="/" icon={<Home size={16} />} label="Home" />
-          <NavItem to="/profile" icon={<User size={16} />} label="Profile" />
-          <NavItem to="/teaching" icon={<GraduationCap size={16} />} label="Teaching" />
+        <div className="hidden lg:flex items-center gap-0.5 ml-auto">
+          <NavItem to="/" icon={<Home size={13} />} label="Home" />
+          <NavItem to="/profile" icon={<User size={13} />} label="Profile" />
+          <NavItem to="/teaching" icon={<GraduationCap size={13} />} label="Teaching" />
+          <NavItem to="/assignments" icon={<FileText size={13} />} label="Assignments" />
+          <NavItem to="/class-calendar" icon={<Calendar size={13} />} label="Calendar" />
           
           {/* Research Dropdown */}
           <div 
@@ -81,8 +85,8 @@ const Navbar = () => {
           >
             <button
               className="
-                group relative flex items-center gap-1 px-3 py-2 rounded-md
-                text-white font-primary
+                group relative flex items-center gap-0.5 px-1.5 py-1 rounded-md
+                text-white font-primary text-xs whitespace-nowrap
                 hover:bg-white/10
                 hover:shadow-md
                 transition-all duration-300 ease-out
@@ -96,12 +100,12 @@ const Navbar = () => {
               "
             >
               <span className="relative z-10 transition-transform duration-300 group-hover:rotate-6">
-                <FlaskConical size={16} />
+                <FlaskConical size={13} />
               </span>
               <span className="relative z-10 transition-all duration-300 group-hover:font-semibold">
                 Research
               </span>
-              <ChevronDown size={14} className="relative z-10" />
+              <ChevronDown size={12} className="relative z-10" />
             </button>
             
             {researchOpen && (
@@ -120,10 +124,10 @@ const Navbar = () => {
             )}
           </div>
           
-          <NavItem to="/achievements" icon={<Award size={16} />} label="Achievements" />
-          <NavItem to="/awarded" icon={<GraduationCap size={16} />} label="Awarded" />
-          <NavItem to="/gallery" icon={<Image size={16} />} label="Gallery" />
-          <NavItem to="/contact" icon={<Phone size={16} />} label="Contact" />
+          <NavItem to="/achievements" icon={<Award size={13} />} label="Achievements" />
+          <NavItem to="/awarded" icon={<GraduationCap size={13} />} label="Awarded" />
+          <NavItem to="/gallery" icon={<Image size={13} />} label="Gallery" />
+          <NavItem to="/contact" icon={<Phone size={13} />} label="Contact" />
         </div>
 
         {/* Mobile Hamburger */}
@@ -141,6 +145,8 @@ const Navbar = () => {
           <MobileNavItem to="/" label="Home" icon={<Home size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/profile" label="Profile" icon={<User size={16} />} onClick={() => setOpen(false)} />
           <MobileNavItem to="/teaching" label="Teaching" icon={<GraduationCap size={16} />} onClick={() => setOpen(false)} />
+          <MobileNavItem to="/assignments" label="Assignments" icon={<FileText size={16} />} onClick={() => setOpen(false)} />
+          <MobileNavItem to="/class-calendar" label="Class Calendar" icon={<Calendar size={16} />} onClick={() => setOpen(false)} />
           
           {/* Mobile Research Dropdown */}
           <div className="w-full block">
@@ -189,8 +195,8 @@ const NavItem = ({ to, icon, label }) => (
   <Link
     to={to}
     className="
-      group relative flex items-center gap-1 px-3 py-2 rounded-md
-      text-white font-primary
+      group relative flex items-center gap-0.5 px-1.5 py-1 rounded-md
+      text-white font-primary text-xs whitespace-nowrap
       hover:bg-white/10
       hover:shadow-md
       transition-all duration-300 ease-out
