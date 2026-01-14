@@ -47,12 +47,12 @@ const Contact = () => {
             <Mail size={18} />
           </div>
           <p className="text-sm ">
-            official:{" "}
+            Official Email:-{" "}
             <span className="underline underline-offset-2">
               hcmsc@mmmut.ac.in;
             </span>
             <br />
-            personal:{" "}
+            Personal Email:-{" "}
             <span className="underline underline-offset-2">
               hc<span className="!font-mono tabular-nums">19856</span>{" "}
               @gmail.com
