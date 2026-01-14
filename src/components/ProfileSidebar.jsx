@@ -25,13 +25,16 @@ const ProfileSidebar = () => {
         <h3 className="font-semibold text-base sm:text-lg text-[#913c07] font-secondary mb-2">
           Office Hours
         </h3>
-        <p className="text-secondary text-xs sm:text-sm font-primary leading-relaxed">
-          Monday to Friday<br />
-          
-          9:30 AM to 5:00 PM
-          <br />
-          Saturday<br /> 9:30 AM to 1:00 PM
-        </p>
+        <div className="text-secondary text-xs sm:text-sm font-primary leading-relaxed space-y-3">
+          <div className="flex flex-col items-center">
+            <div className="font-medium mb-1">Monday to Friday</div>
+            <div style={{ fontFamily: 'Times New Roman, serif' }} className="tracking-wide">9:30 AM to 5:00 PM</div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="font-medium mb-1">Saturday</div>
+            <div style={{ fontFamily: 'Times New Roman, serif' }} className="tracking-wide">9:30 AM to 1:00 PM</div>
+          </div>
+        </div>
       </div>
 
     </aside>
