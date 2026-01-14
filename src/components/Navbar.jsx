@@ -67,10 +67,10 @@ const Navbar = () => {
 
         {/* Left: Logo */}
         <div>
-          <div className="text-sm sm:text-base md:text-lg font-secondary italic text-white">
+          <div className="text-lg sm:text-xl md:text-2xl font-secondary italic text-white items-center whitespace-nowrap">
             Dr. Harish Chandra
           </div>
-          <div className="text-[10px] sm:text-xs text-white font-primary">
+          <div className="text-xs sm:text-sm text-white font-primary">
             Assistant Professor
           </div>
         </div>
