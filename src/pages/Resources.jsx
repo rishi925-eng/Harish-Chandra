@@ -8,13 +8,13 @@ const websites = [
   },
 ];
 
-const bookSources = [
-  "http://en.bookfi.org",
-  "http://www.bookboon.com",
-  "http://www.getfreeebooks.com/",
-  "http://www.onlinefreeebooks.net/",
-  "http://www.freebookspot.es/",
-];
+// const bookSources = [
+//   "http://en.bookfi.org",
+//   "http://www.bookboon.com",
+//   "http://www.getfreeebooks.com/",
+//   "http://www.onlinefreeebooks.net/",
+//   "http://www.freebookspot.es/",
+// ];
 
 const downloads = [
   {
