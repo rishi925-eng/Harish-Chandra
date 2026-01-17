@@ -22,15 +22,15 @@ const Home = () => {
         {/* Text Content */}
         <section className="mt-4 sm:mt-6 md:mt-10 text-secondary text-sm sm:text-base md:text-lg leading-relaxed font-primary">
           <p className="mb-3 sm:mb-4">
-            <span className="font-semibold">Dr. Harish Chandra</span> is an Assistant Professor of Mathematics in the Department of Mathematics and Scientific Computing at Madan Mohan Malaviya University of Technology (MMMUT), Gorakhpur, where he has been actively engaged in teaching, research, and academic administration for nearly two decades.
+            <span className="font-semibold">Dr. Harish Chandra</span> is an accomplished academician serving as an Assistant Professor of Mathematics in the Department of Mathematics and Scientific Computing at Madan Mohan Malaviya University of Technology (MMMUT), Gorakhpur. With nearly two decades of experience in teaching, research, and academic administration, he has made significant contributions to higher education.
           </p>
 
           <p className="mb-3 sm:mb-4">
-            He earned his Ph.D. in Mathematics from the University of Lucknow and is a UGC-NET (JRF & SRF) qualified scholar, reflecting his strong academic foundation and research capabilities.
+            He earned his Ph.D. in Mathematics from the University of Lucknow and is a UGC-NET qualified scholar (JRF & SRF), demonstrating a strong foundation in mathematical research and scholarly excellence.
           </p>
 
           <p>
-            Dr. Chandra is a dedicated educator known for his structured approach to mathematical concepts and his commitment to nurturing analytical and problem-solving skills among students.
+            Dr. Chandra is widely recognized as a dedicated and student-centric educator, known for his systematic approach to complex mathematical concepts and his unwavering commitment to developing analytical thinking and problem-solving skills among students. His academic engagement reflects a balanced blend of teaching excellence, research insight, and institutional service.
           </p>
         </section>
 
