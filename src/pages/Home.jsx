@@ -1,38 +1,40 @@
 const Home = () => {
   return (
-    <div className="w-full">
-      {/* Border wrapper */}
-      <div className="border border-[#913c07] p-2 sm:p-4 md:p-6 overflow-hidden">
+    <div className="w-full min-h-[500px] sm:min-h-screen bg-white flex items-center overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
 
-        {/* Hero Image */}
-        <section className="w-full overflow-hidden">
-          <picture>
-            <source
-              media="(min-width: 1024px)"
-              srcSet="/hero-desktop.jpeg"
-            />
-            <img
-              src="/hero-mobile.jpeg"
-              alt="Hero"
-              className="w-full h-auto object-contain sm:rounded-xl shadow-xl transition-transform duration-500 border-4 border-white rounded-lg"
-            />
-          </picture>
-        </section>
+        {/* Left: Text Content */}
+        <div className="order-2 lg:order-1 p-6 sm:p-12 lg:p-16 flex flex-col justify-center space-y-6 z-10 bg-white">
+          <div className="space-y-2">
+            <h2 className="text-[#913c07] font-bold tracking-wider uppercase text-sm">Assistant Professor</h2>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+              Dr. Harish <br /> <span className="text-[#913c07]">Chandra</span>
+            </h1>
+            <div className="h-1.5 w-24 bg-[#913c07] rounded-full mt-4"></div>
+          </div>
 
-        {/* Text Content */}
-        <section className="mt-4 sm:mt-6 md:mt-10 text-secondary text-sm sm:text-base md:text-lg leading-relaxed font-primary">
-          <p className="mb-3 sm:mb-4">
-            <span className="font-semibold">Dr. Harish Chandra</span> is an accomplished academician serving as an Assistant Professor of Mathematics in the Department of Mathematics and Scientific Computing at Madan Mohan Malaviya University of Technology (MMMUT), Gorakhpur. With nearly two decades of experience in teaching, research, and academic administration, he has made significant contributions to higher education.
-          </p>
+          <div className="text-gray-600 text-base sm:text-lg leading-relaxed text-justify lg:text-left space-y-4">
+            <p>
+              <span className="font-semibold text-gray-800">Dr. Harish Chandra</span> is an accomplished academician serving as an Assistant Professor of Mathematics in the Department of Mathematics and Scientific Computing at Madan Mohan Malaviya University of Technology (MMMUT), Gorakhpur.
+            </p>
+            <p>
+              With nearly two decades of experience in teaching, research, and academic administration, he has made significant contributions to higher education. He earned his Ph.D. in Mathematics from the University of Lucknow and is a UGC-NET qualified scholar (JRF & SRF).
+            </p>
+          </div>
+        </div>
 
-          <p className="mb-3 sm:mb-4">
-            He earned his Ph.D. in Mathematics from the University of Lucknow and is a UGC-NET qualified scholar (JRF & SRF), demonstrating a strong foundation in mathematical research and scholarly excellence.
-          </p>
-
-          <p>
-            Dr. Chandra is widely recognized as a dedicated and student-centric educator, known for his systematic approach to complex mathematical concepts and his unwavering commitment to developing analytical thinking and problem-solving skills among students. His academic engagement reflects a balanced blend of teaching excellence, research insight, and institutional service.
-          </p>
-        </section>
+        {/* Right: Image */}
+        <div className="order-1 lg:order-2 relative h-[400px] lg:h-auto w-full">
+          <img
+            src="/13.jpg"
+            alt="Dr. Harish Chandra"
+            className="w-full h-full object-cover object-center lg:object-left"
+          />
+          {/* White Gradient Overlay - Left side of image on Desktop */}
+          <div className="hidden sm:block absolute inset-y-0 left-0 w-24 sm:w-48 lg:w-64 bg-gradient-to-r from-white via-white/70 to-transparent"></div>
+          {/* Bottom Gradient for Mobile Text readability transition if needed, or just style */}
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white lg:hidden"></div>
+        </div>
 
       </div>
     </div>
