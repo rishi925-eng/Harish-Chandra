@@ -12,7 +12,7 @@ const Gallery = () => {
     { id: 10, srce: "/10.png", alte: "Gallery Image 10" },
     { id: 11, srce: "/11.jpeg", alte: "Gallery Image 11" },
     { id: 12, srce: "/12.jpeg", alte: "Gallery Image 12" },
-    { id: 13, srce: "/13.jpg", alte: "Gallery Image 13" },
+    { id: 13, srce: "/13.JPG", alte: "Gallery Image 13" },
     { id: 14, srce: "/14.jpeg", alte: "Gallery Image 14" },
     { id: 15, srce: "/15.jpeg", alte: "Gallery Image 15" },
     { id: 16, srce: "/16.jpeg", alte: "Gallery Image 16" },
