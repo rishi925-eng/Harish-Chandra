@@ -26,7 +26,7 @@ const Home = () => {
         {/* Right: Image */}
         <div className="order-1 lg:order-2 relative h-[400px] lg:h-auto w-full">
           <img
-            src="/13.jpg"
+            src="/13.JPG"
             alt="Dr. Harish Chandra"
             className="w-full h-full object-cover object-center lg:object-left"
           />
