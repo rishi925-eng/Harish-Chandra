@@ -71,7 +71,7 @@ const Resources = () => {
       </section>
 
       {/*Print Sources Section*/}
-      <section className="mb-8">
+      {/* <section className="mb-8">
         <h3 className="text-lg font-bold text-[#913c07] mb-2">Print Sources (Books)</h3>
         <p className="text-[#563c29] text-sm mb-3">
           Following websites are very useful for books:
@@ -90,7 +90,7 @@ const Resources = () => {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
 
       {/*Helpful Downloads Section*/}
       <section>
